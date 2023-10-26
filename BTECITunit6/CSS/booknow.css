@@ -1,0 +1,110 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #ED8975;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+h1 {
+    font-size: 2.3rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "Header Header Header"
+    "Heading Heading Heading"
+    "Form Form Form"
+    "Large-Text-Box Large-Text-Box Large-Text-Box"
+    "Submit Submit Submit"
+    "Footer Footer Footer"; 
+}
+.Header { grid-area: Header; }
+.Footer { grid-area: Footer;
+  background-color:#F2D096  }
+.Heading { grid-area: Heading; }
+.Form { grid-area: Form; }
+.Large-Text-Box { grid-area: Large-Text-Box; }
+.Submit { grid-area: Submit; }
